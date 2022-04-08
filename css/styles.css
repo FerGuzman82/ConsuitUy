@@ -442,9 +442,10 @@ nav ul li a{
     border-radius: 3px;
     }
 
-li a:hover{
-    background: rgb(247, 222, 140);
-    transition: 0.5s;
+li a:hover, a:focus{
+    background-color: rgb(247, 222, 140);
+    transition: all 0.5s ease-out; 
+    color:lightseagreen;
 }
 
 .checkbtn{
