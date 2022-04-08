@@ -32,6 +32,7 @@
     height: 70px;
     width: 100%;
     border: 1px solid lightseagreen;
+    background-image: linear-gradient(to right, white, aliceblue);
 }
 
 nav ul li a{
@@ -88,7 +89,7 @@ a img{
     justify-content: center;
     font-size: 14px;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: radial-gradient(white, aliceblue);
 }   
 
 .contenedor .servicio1{
@@ -112,7 +113,7 @@ a img{
     align-items: center;
     justify-content: center;
     color: rgb(24, 20, 65);
-    background-color: rgb(247, 222, 140);
+    background-image: radial-gradient(white, rgb(247, 222, 140));
 
 }
 
@@ -123,7 +124,7 @@ a img{
     align-items: center;
     justify-content: center;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: radial-gradient(white, aliceblue);
  }
 
  .intTexto{
@@ -167,7 +168,7 @@ a img{
     justify-content: center;
     font-size: 14px;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: linear-gradient(to right, white, aliceblue);
 }
 
 .contenedorNos .direccion1{
@@ -193,7 +194,7 @@ justify-content: center;
 height: 150px;
 font-size: smaller;
 color: rgb(24, 20, 65);
-background:rgb(247, 222, 140);
+background-image: radial-gradient(white, rgb(247, 222, 140));
 }
 
 .contenedorNos footer{
@@ -234,7 +235,7 @@ background:rgb(247, 222, 140);
     justify-content: center;
     font-size: 14px;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: linear-gradient(to right, white, aliceblue);
 }
 
 .contenedorSer .servicio1{
@@ -267,7 +268,7 @@ align-items: center;
 justify-content: center;
 font-size: smaller;
 color: rgb(24, 20, 65);
-background:rgb(247, 222, 140);
+background-image: radial-gradient(white, rgb(247, 222, 140));;
 }
 
 .contenedorSer footer{
@@ -308,8 +309,8 @@ background:rgb(247, 222, 140);
     justify-content: center;
     font-size: 14px;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
-}
+    background-image: linear-gradient(to right, white, aliceblue);
+    }
 
 .contenedorNot .noticia1{
     grid-area: noticia1;
@@ -372,7 +373,7 @@ color: rgb(24, 20, 65);
     justify-content: center;
     font-size: 14px;
     color: rgb(24, 20, 65);
-
+    background-image: radial-gradient(white, aliceblue);
 }
 
 .contenedorCon .datosCon{
@@ -386,7 +387,7 @@ text-align:center;
 align-items: center;
 justify-content: center;
 color: rgb(24, 20, 65);
-background-color: aliceblue;
+background-image: linear-gradient(to right, white, aliceblue);
 }
 
 .contenedorCon footer{
@@ -407,6 +408,7 @@ nav{
       height: 80px;
       width: 100%;
       border: 1px solid lightseagreen;
+      background-image: linear-gradient(to right, white, aliceblue);
   }
 
 .logo{
@@ -501,7 +503,7 @@ li a:hover{
     justify-content: center;
     font-size: 14px;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: radial-gradient(white, aliceblue);
 }
 
 .contenedor .servicio1{
@@ -525,7 +527,7 @@ display:flex;
 align-items: center;
 justify-content: center;
 color: rgb(24, 20, 65);
-background-color: rgb(247, 222, 140);
+background-image: radial-gradient(white, rgb(247, 222, 140));
 
 }
 
@@ -572,7 +574,7 @@ p span{
     align-items: center;
     justify-content: center;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: radial-gradient(white, aliceblue);
 }
 
 .tituloNos{
@@ -601,7 +603,7 @@ align-items: center;
 justify-content: center;
 height: 150px;
 color: rgb(24, 20, 65);
-background:rgb(247, 222, 140);
+background-image: radial-gradient(white, rgb(247, 222, 140));
 }
 
 .contenedorNos footer{
@@ -645,7 +647,7 @@ background:rgb(247, 222, 140);
     align-items: center;
     justify-content: center;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: radial-gradient(white, aliceblue);
 }
 
 .contenedorSer aside{
@@ -680,7 +682,7 @@ align-items: center;
 justify-content: center;
 height: 150px;
 color: rgb(24, 20, 65);
-background:rgb(247, 222, 140);
+background-image: radial-gradient(white, rgb(247, 222, 140));
 }
 
 .contenedorSer footer{
@@ -690,7 +692,7 @@ background:rgb(247, 222, 140);
     align-items: center;
     justify-content: center;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: radial-gradient(white, aliceblue);
  }
  
  /* SECCIÓN NOTICIAS - DESKTOP */
@@ -723,7 +725,7 @@ background:rgb(247, 222, 140);
     align-items: center;
     justify-content: center;
     color: rgb(24, 20, 65);
-    background-color: aliceblue;
+    background-image: radial-gradient(white, aliceblue);
 }
 
 .contenedorNot .noticia1{
@@ -805,7 +807,7 @@ align-items: center;
 justify-content: center;
 height: 240px;
 color: rgb(24, 20, 65);
-background-color: aliceblue;
+background-image: radial-gradient(white, aliceblue);
 }
 
 .contenedorCon footer{
