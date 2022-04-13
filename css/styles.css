@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;  
+    font-family: 'Roboto', sans-serif;
 }
 
 /* VISTA - MOBILE */
@@ -17,13 +18,15 @@
     grid-template-areas: 
     "header header"
     "section section"
+    "parrafo parrafo"
     "aside aside"
     "servicio1 servicio2"
     "servicio3 servicio3"
+    "logoAzul  menuInf"
     "footer footer";
     grid-gap: 10px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 350px auto 270px auto auto;
+    grid-template-rows: 350px auto auto 270px auto auto auto auto;
 }
 
 .contenedor header{
@@ -79,18 +82,49 @@ a img{
     max-height: auto;
     }
 
+    .contenedor .parrafo{
+        grid-area: parrafo;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: rgb(24, 20, 65);
+        background-image: radial-gradient(white, aliceblue);
+    }
+
 .contenedor aside{
     grid-area: aside;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: rgb(24, 20, 65);
-    background-image: radial-gradient(white, aliceblue);
-}   
+    padding: auto;
+    width: 100%;
+    height: 100%;     
+    }
+
+    .contenedor aside p{
+            width: 100%;
+            height: 100%;
+            background-color: lightseagreen;
+            vertical-align: middle;
+            color: white;
+            animation-name: efecto;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-duration: 20s;
+            animation-delay: 0s;
+           }             
+
+         @keyframes efecto{
+            0%{ width: 100px; }
+            25%{ width: 470px; }
+            50%{ width: 200px;
+            background-color: lightseagreen;}
+            75%{ width: 470px;}
+            100%{ width: 100px;
+            background-color:rgb(247, 222, 140);}
+        }              
+
 
 .contenedor .servicio1{
     grid-area: servicio1;
@@ -117,7 +151,51 @@ a img{
 
 }
 
-.contenedor footer, .contenedorNos footer, .contenedorSer footer, .contenedorNot footer, .contenedorCon footer{
+ .contenedor .logoAzul, .contenedorNos .logoAzul, .contenedorSer .logoAzul, .contenedorNot .logoAzul, .contenedorCon .logoAzul{
+    grid-area: logoAzul;
+}
+
+.contenedor .menuInf, .contenedorNos .menuInf, .contenedorSer .menuInf, .contenedorNot .menuInf, .contenedorCon .menuInf{
+    grid-area: menuInf;
+    background-color: rgb(64, 83, 100);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%; 
+    padding: 15px;
+
+}   
+
+.menuInf ul{
+    margin-top: 20px;
+    color: lightseagreen;
+}
+
+.menuInf ul li{
+    padding-bottom: 4px;
+    color: lightseagreen;
+}
+
+
+.iconLink{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconLink i{
+    color: lightseagreen;
+    font-size: 40px;
+    margin: 15px;
+}
+
+.icon{
+    color: lightseagreen;
+}
+
+
+ .contenedor footer, .contenedorNos footer, .contenedorSer footer, .contenedorNot footer, .contenedorCon footer{
     grid-area: footer;
     text-align:center;
     display:flex;
@@ -144,10 +222,11 @@ a img{
     "section section"
     "direccion1 direccion3"
     "direccion2 direccion2"
+    "logoAzul menuInf"
     "footer footer";
     grid-gap: 10px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 350px 200px auto auto auto;
+    grid-template-rows: 350px 200px auto auto auto auto;
 }
 
 .contenedorNos header{
@@ -191,11 +270,19 @@ flex-direction: column;
 text-align:center;
 align-items: center;
 justify-content: center;
-height: 150px;
+height: auto;
 font-size: smaller;
 color: rgb(24, 20, 65);
 background-image: radial-gradient(white, rgb(247, 222, 140));
 }
+
+.contenedorNos .menuInf{
+    grid-area: menuInf;
+}
+
+.contenedorNos .logoAzul{
+    grid-area: logoAzul
+ }
 
 .contenedorNos footer{
     grid-area: footer
@@ -209,12 +296,12 @@ background-image: radial-gradient(white, rgb(247, 222, 140));
     "header header"
     "section section"
     "servicio1 servicio2"
-    "aside aside"
     "servicio3 servicio4"
+    "logoAzul menuInf"
     "footer footer";
     grid-gap: 10px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 350px 150px 150px 150px 150px auto;
+    grid-template-rows: 350px 150px 150px 150px auto auto;
 }
 
 .contenedorSer header{
@@ -271,6 +358,14 @@ color: rgb(24, 20, 65);
 background-image: radial-gradient(white, rgb(247, 222, 140));;
 }
 
+.contenedorSer .menuInf{
+    grid-area: menuInf;
+}
+
+.contenedorSer .logoAzul{
+    grid-area: logoAzul
+ }
+
 .contenedorSer footer{
     grid-area: footer
 }
@@ -285,6 +380,7 @@ background-image: radial-gradient(white, rgb(247, 222, 140));;
     "noticia1 noticia1"
     "noticia2 noticia2"
     "noticia3 noticia3"
+    "logoAzul menuInf"
     "footer footer";
     grid-gap: 10px;
     grid-template-columns: 50% 50%;
@@ -320,7 +416,6 @@ background-image: radial-gradient(white, rgb(247, 222, 140));;
     grid-area: noticia2;
 }
 
-
 .contenedorNot .noticia3{
     grid-area: noticia3;
 }
@@ -337,6 +432,14 @@ font-size: smaller;
 color: rgb(24, 20, 65);
 }
 
+.contenedorNot .menuInf{
+    grid-area: menuInf
+}
+
+.contenedorNot .logoAzul{
+    grid-area: logoAzul
+}
+
 .contenedorNot footer{
     grid-area: footer
 }
@@ -349,6 +452,7 @@ color: rgb(24, 20, 65);
     "header header"
     "form form"
     "datosCon datosCon"
+    "logoAzul menuInf"
     "footer footer";
     grid-gap: 10px;
     grid-template-columns: 50% 50%;
@@ -389,6 +493,14 @@ justify-content: center;
 color: rgb(24, 20, 65);
 background-image: linear-gradient(to right, white, aliceblue);
 }
+
+.contenedorCon .menuInf{
+    grid-area: menuInf;
+}
+
+.contenedorCon .logoAzul{
+    grid-area: logoAzul
+ }
 
 .contenedorCon footer{
     grid-area: footer
@@ -442,11 +554,12 @@ nav ul li a{
     border-radius: 3px;
     }
 
-li a:hover, a:focus{
+nav ul li a:hover{
     background-color: rgb(247, 222, 140);
     transition: all 0.5s ease-out; 
     color:lightseagreen;
 }
+
 
 .checkbtn{
     font-size: 20 px;
@@ -469,10 +582,12 @@ li a:hover, a:focus{
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(6, auto);
     grid-template-areas: "header header header"
                          "section section aside"
+                         "parrafo parrafo parrafo"
                          "servicio1 servicio2 servicio3"
+                         "logoAzul menuInf menuInf"
                          "footer footer footer"                  
   }
 
@@ -482,56 +597,41 @@ li a:hover, a:focus{
 
 .contenedor section {
     grid-area: section;
-}
-
-.slider{
-    width: 95%;
-    margin: auto
-}
-
-.slider ul{
-    display: flex;
-    padding:0;
-    width: 400%;
-    animation: cambio 20s infinite;
-}
-
-.slider li {
-    width: 100%;
-    list-style: none;
-}
-
-.slider img{
-    width: 100%;
-}
-
-@keyframes cambio {
-    0% {margin-left: 0; }
-   20% {margin-left: 0; }
-
-   25% {margin-left: -100%; }
-   45% {margin-left: -100%; }
-
-   50% {margin-left: -200%; }
-   70% {margin-left: -200%; }
-
-   75% {margin-left: -300%; }
-   100% {margin-left: -300%; }
-}
-
-
-.contenedor footer{
-    grid-area: footer;
-    text-align:center;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(24, 20, 65);
-    background-color: aliceblue;
- }
+    }
 
 .contenedor aside{
     grid-area: aside;
+    padding: auto;
+    width: 100%;
+    height: 100%;     
+    }
+
+    .contenedor aside p{
+            width: 100%;
+            height: 100%;
+            background-color: lightseagreen;
+            vertical-align: middle;
+            color: white;
+            animation-name: efecto;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-duration: 20s;
+            animation-delay: 0s;
+           }             
+
+         @keyframes efecto{
+            0%{ width: 100px; }
+            25%{ width: 300px; }
+            50%{ width: 200px;
+            background-color: lightseagreen;}
+            75%{ width: 300px;}
+            100%{ width: 100px;
+            background-color:rgb(247, 222, 140);}
+        }
+
+
+.contenedor .parrafo{
+    grid-area: parrafo;
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -568,7 +668,64 @@ background-image: radial-gradient(white, rgb(247, 222, 140));
 
 }
 
+.contenedor .logoAzul, .contenedorNos .logoAzul, .contenedorSer .logoAzul, .contenedorNot .logoAzul, .contenedorCon .logoAzul{
+    grid-area: logoAzul;
+}
 
+.contenedor .menuInf, .contenedorNos .menuInf, .contenedorSer .menuInf, .contenedorNot .menuInf, .contenedorCon .menuInf{
+    grid-area: menuInf;
+    background-color: rgb(64, 83, 100);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 40%; 
+    padding: 15px;
+
+}   
+
+.menuInf ul{
+    margin-top: 20px;
+    color: lightseagreen;
+}
+
+.menuInf ul li{
+    padding-bottom: 4px;
+    color: lightseagreen;
+}
+
+
+.iconLink{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconLink i{
+    color: lightseagreen;
+    font-size: 40px;
+    margin: 15px;
+}
+
+.icon{
+    color: lightseagreen;
+}
+
+
+.contenedor footer, .contenedorNos footer, .contenedorSer footer, .contenedorNot footer, .contenedorCon footer{
+    grid-area: footer;
+    display:flex;
+    flex-direction: column;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color:   aliceblue;
+    border: 1px solid lightseagreen;
+
+ }
+
+ 
 .intTexto{
     margin-bottom: 20px;
 }
@@ -594,6 +751,7 @@ p span{
     grid-template-areas: "header header header"
                          "section section section"
                          "direccion1 direccion2 direccion3"
+                         "logoAzul menuInf menuInf"
                          "footer footer footer"
                         
   }
@@ -630,17 +788,20 @@ p span{
     grid-area: direccion3;
 }
 
-.contenedorNos .direccion1,
-.contenedorNos .direccion2, 
+.contenedorNos .direccion1, 
 .contenedorNos .direccion3{
 display:flex;
 flex-direction: column;
 text-align:center;
 align-items: center;
 justify-content: center;
-height: 150px;
+height: auto;
 color: rgb(24, 20, 65);
 background-image: radial-gradient(white, rgb(247, 222, 140));
+}
+
+.contenedorNos .menuInf{
+    grid-area: menuInf;
 }
 
 .contenedorNos footer{
@@ -666,7 +827,8 @@ background-image: radial-gradient(white, rgb(247, 222, 140));
     grid-template-areas: "header header header"
                          "section section section"
                          "servicio1 servicio2 aside"
-                         "servicio3 servicio4 aside"        
+                         "servicio3 servicio4 aside"
+                         "logoAzul menuInf menuInf"        
                          "footer footer footer"
                         
   }
@@ -744,7 +906,8 @@ background-image: radial-gradient(white, rgb(247, 222, 140));
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "header header header"
                          "section section section"
-                         "noticia1 noticia2 noticia3"      
+                         "noticia1 noticia2 noticia3"
+                         "logoAzul menuInf menuInf"      
                          "footer footer footer"
                         
   }
@@ -808,10 +971,12 @@ color: rgb(24, 20, 65);
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 350px auto auto;
+    grid-template-rows: auto 240px auto auto;
     grid-template-areas: "header header header"
+                         "mapa mapa mapa"
                          "form form form"
-                         "datosCon datosCon datosCon"      
+                         "datosCon datosCon datosCon"
+                         "logoAzul menuInf menuInf"       
                          "footer footer footer"
                         
   }
@@ -836,7 +1001,7 @@ color: rgb(24, 20, 65);
 }
 
 
-.contenedorCon .datosCon{
+.contenedorCon .datosCon, .contenedorCon .mapa{
 display:flex;
 flex-direction: column;
 text-align:center;
@@ -847,6 +1012,9 @@ color: rgb(24, 20, 65);
 background-image: radial-gradient(white, aliceblue);
 }
 
+.contenedorCon .mapa{
+    grid-area: mapa;
+}
 .contenedorCon footer{
     grid-area: footer;
     text-align:center;
